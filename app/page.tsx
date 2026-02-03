@@ -137,9 +137,9 @@ export default function Home() {
                         <span className="text-gray-300 font-mono">{c.name}</span>
                         <div className="flex gap-6">
                           <span className="text-gray-500 text-xs w-8 text-right">充</span>
-                          <StatusBadge disabled={c.deposit} />
+                          <StatusBadge disabled={!c.deposit} />
                           <span className="text-gray-500 text-xs w-8 text-right">提</span>
-                          <StatusBadge disabled={c.withdraw} delayed={c.withdraw_delayed} />
+                          <StatusBadge disabled={!c.withdraw} delayed={c.withdraw_delayed} />
                         </div>
                       </div>
                     ))}
